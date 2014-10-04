@@ -1,0 +1,148 @@
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+OBJS	Makefile	/^OBJS=lookup.o server.o anet.o event.o zmalloc.o log.o protocol.o$/;"	m
+cc	Makefile	/^cc=gcc$/;"	m
+ANET_CONNECT_NONBLOCK	anet.c	200;"	d	file:
+ANET_CONNECT_NONE	anet.c	199;"	d	file:
+anetCreateSocket	anet.c	/^static int anetCreateSocket(char *err, int domain) {$/;"	f	file:
+anetDisableTcpNoDelay	anet.c	/^int anetDisableTcpNoDelay(char *err, int fd) $/;"	f
+anetEnableTcpNoDelay	anet.c	/^int anetEnableTcpNoDelay(char *err, int fd)$/;"	f
+anetGenericAccept	anet.c	/^static int anetGenericAccept(char *err, int s, struct sockaddr *sa, socklen_t *len) {$/;"	f	file:
+anetKeepAlive	anet.c	/^int anetKeepAlive(char *err, int fd, int interval)$/;"	f
+anetListen	anet.c	/^static int anetListen(char *err, int s, struct sockaddr *sa, socklen_t len) {$/;"	f	file:
+anetNonBlock	anet.c	/^int anetNonBlock(char *err, int fd)$/;"	f
+anetPeerToString	anet.c	/^int anetPeerToString(int fd, char *ip, int *port) {$/;"	f
+anetRead	anet.c	/^int anetRead(int fd, char *buf, int count)$/;"	f
+anetResolve	anet.c	/^int anetResolve(char *err, char *host, char *ipbuf)$/;"	f
+anetSetError	anet.c	/^static void anetSetError(char *err, const char *fmt, ...)$/;"	f	file:
+anetSetSendBuffer	anet.c	/^int anetSetSendBuffer(char *err, int fd, int buffsize)$/;"	f
+anetSetTcpNoDelay	anet.c	/^static int anetSetTcpNoDelay(char *err, int fd, int val)$/;"	f	file:
+anetSockName	anet.c	/^int anetSockName(int fd, char *ip, int *port) {$/;"	f
+anetTcpAccept	anet.c	/^int anetTcpAccept(char *err, int s, char *ip, int *port) {$/;"	f
+anetTcpConnect	anet.c	/^int anetTcpConnect(char *err, char *addr, int port)$/;"	f
+anetTcpGenericConnect	anet.c	/^static int anetTcpGenericConnect(char *err, char *addr, int port, int flags)$/;"	f	file:
+anetTcpKeepAlive	anet.c	/^int anetTcpKeepAlive(char *err, int fd)$/;"	f
+anetTcpNonBlockConnect	anet.c	/^int anetTcpNonBlockConnect(char *err, char *addr, int port)$/;"	f
+anetTcpServer	anet.c	/^int anetTcpServer(char *err, int port, char *bindaddr)$/;"	f
+anetUnixAccept	anet.c	/^int anetUnixAccept(char *err, int s) {$/;"	f
+anetUnixConnect	anet.c	/^int anetUnixConnect(char *err, char *path)$/;"	f
+anetUnixGenericConnect	anet.c	/^int anetUnixGenericConnect(char *err, char *path, int flags)$/;"	f
+anetUnixNonBlockConnect	anet.c	/^int anetUnixNonBlockConnect(char *err, char *path)$/;"	f
+anetUnixServer	anet.c	/^int anetUnixServer(char *err, char *path, mode_t perm)$/;"	f
+anetWrite	anet.c	/^int anetWrite(int fd, char *buf, int count)$/;"	f
+AF_LOCAL	anet.h	39;"	d
+ANET_ERR	anet.h	35;"	d
+ANET_ERR_LEN	anet.h	36;"	d
+ANET_H	anet.h	32;"	d
+ANET_OK	anet.h	34;"	d
+add_event	event.c	/^int add_event(event_pool *pool, int fd, int mask, noti_chain_callback cb)$/;"	f
+create_event	event.c	/^event_pool * create_event(int size)$/;"	f
+del_event	event.c	/^int del_event(event_pool *pool, int fd)$/;"	f
+handle_event	event.c	/^int handle_event(event_pool *pool, int to)$/;"	f
+set_event	event.c	/^int set_event(event_pool *pool, int fd, int mask)$/;"	f
+EVENT_H	event.h	2;"	d
+cb	event.h	/^	noti_chain_callback cb;$/;"	m	struct:event
+data	event.h	/^	char *data;$/;"	m	struct:event
+epfd	event.h	/^    int epfd;$/;"	m	struct:event_pool
+epollEv	event.h	/^    struct epoll_event epollEv[0];$/;"	m	struct:event_pool	typeref:struct:event_pool::epoll_event
+event	event.h	/^typedef struct event {$/;"	s
+event	event.h	/^} event;$/;"	t	typeref:struct:event
+event_pool	event.h	/^typedef struct event_pool {$/;"	s
+event_pool	event.h	/^} event_pool;$/;"	t	typeref:struct:event_pool
+events	event.h	/^    event events[0];$/;"	m	struct:event_pool
+len	event.h	/^	int len;$/;"	m	struct:event
+maxLen	event.h	/^	int maxLen;$/;"	m	struct:event
+maxfd	event.h	/^    int maxfd;$/;"	m	struct:event_pool
+noti_chain_callback	event.h	/^typedef int (*noti_chain_callback) (struct event *, int);$/;"	t
+tail	event.h	/^	char *tail;$/;"	m	struct:event
+write	event.h	/^	char *write;$/;"	m	struct:event
+add_event	event_kqueue.c	/^int add_event(event_pool *pool, int fd, int mask)$/;"	f
+create_event	event_kqueue.c	/^event_pool * create_event(int size)$/;"	f
+del_event	event_kqueue.c	/^int del_event(event_pool *pool, int fd, int mask)$/;"	f
+event_pool	event_kqueue.c	/^typedef struct event_pool {$/;"	s	file:
+event_pool	event_kqueue.c	/^} event_pool;$/;"	t	typeref:struct:event_pool	file:
+events	event_kqueue.c	/^    kevent *events; \/* Registered events *\/$/;"	m	struct:event_pool	file:
+handle_event	event_kqueue.c	/^int handle_event(event_pool *pool, int to)$/;"	f
+kqfd	event_kqueue.c	/^    int kqfd;	\/* kqueue fd*\/$/;"	m	struct:event_pool	file:
+maxfd	event_kqueue.c	/^    int maxfd;   \/* highest file descriptor currently registered *\/$/;"	m	struct:event_pool	file:
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+lookup_log	log.c	/^void lookup_log(int level, const char *fmt,...) {$/;"	f
+LOG_DEBUG	log.h	4;"	d
+LOG_H	log.h	2;"	d
+LOG_ROW	log.h	5;"	d
+logLevel	log.h	/^int logLevel;$/;"	v
+main	lookup.c	/^int main(int argc, char **argv)$/;"	f
+main	lookup_client.c	/^int main(int argc, char **argv)$/;"	f
+build_request_str	protocol.c	/^char* build_request_str(lookup_protocol *pro)$/;"	f
+IS_ANSWER	protocol.h	7;"	d
+IS_QUESTION	protocol.h	8;"	d
+PROTOCOL_H	protocol.h	2;"	d
+VERSION	protocol.h	6;"	d
+body	protocol.h	/^	lookup_body body[0];$/;"	m	struct:lookup_protocol
+body_len	protocol.h	/^	ushort body_len;$/;"	m	struct:lookup_protocol
+data	protocol.h	/^	char *data;$/;"	m	struct:lookup_body
+info	protocol.h	/^	char info;$/;"	m	struct:lookup_protocol
+len	protocol.h	/^	ushort len;$/;"	m	struct:lookup_body
+lookup_body	protocol.h	/^typedef struct lookup_body {$/;"	s
+lookup_body	protocol.h	/^} lookup_body;$/;"	t	typeref:struct:lookup_body
+lookup_protocol	protocol.h	/^typedef struct lookup_protocol {$/;"	s
+lookup_protocol	protocol.h	/^} lookup_protocol;$/;"	t	typeref:struct:lookup_protocol
+type	protocol.h	/^	char type;$/;"	m	struct:lookup_body
+initServer	server.c	/^void initServer(char *host, int port) {$/;"	f
+serverAccept	server.c	/^int serverAccept(event *v, int fd) {$/;"	f
+serverRead	server.c	/^int serverRead(event *ev, int fd) {$/;"	f
+serverWrite	server.c	/^int serverWrite(event *ev, int fd) {$/;"	f
+IO_PACKET_SIZE	server.h	6;"	d
+SERVER_H	server.h	2;"	d
+pool	server.h	/^event_pool *pool;$/;"	v
+_UTILS_H	util.h	2;"	d
+PREFIX_SIZE	zmalloc.c	47;"	d	file:
+PREFIX_SIZE	zmalloc.c	50;"	d	file:
+PREFIX_SIZE	zmalloc.c	52;"	d	file:
+calloc	zmalloc.c	59;"	d	file:
+calloc	zmalloc.c	64;"	d	file:
+free	zmalloc.c	61;"	d	file:
+free	zmalloc.c	66;"	d	file:
+malloc	zmalloc.c	58;"	d	file:
+malloc	zmalloc.c	63;"	d	file:
+realloc	zmalloc.c	60;"	d	file:
+realloc	zmalloc.c	65;"	d	file:
+update_zmalloc_stat_add	zmalloc.c	70;"	d	file:
+update_zmalloc_stat_add	zmalloc.c	73;"	d	file:
+update_zmalloc_stat_alloc	zmalloc.c	87;"	d	file:
+update_zmalloc_stat_free	zmalloc.c	97;"	d	file:
+update_zmalloc_stat_sub	zmalloc.c	71;"	d	file:
+update_zmalloc_stat_sub	zmalloc.c	79;"	d	file:
+used_memory	zmalloc.c	/^static size_t used_memory = 0;$/;"	v	file:
+used_memory_mutex	zmalloc.c	/^pthread_mutex_t used_memory_mutex = PTHREAD_MUTEX_INITIALIZER;$/;"	v
+zcalloc	zmalloc.c	/^void *zcalloc(size_t size) {$/;"	f
+zfree	zmalloc.c	/^void zfree(void *ptr) {$/;"	f
+zlibc_free	zmalloc.c	/^void zlibc_free(void *ptr) {$/;"	f
+zmalloc	zmalloc.c	/^void *zmalloc(size_t size) {$/;"	f
+zmalloc_default_oom	zmalloc.c	/^static void zmalloc_default_oom(size_t size) {$/;"	f	file:
+zmalloc_enable_thread_safeness	zmalloc.c	/^void zmalloc_enable_thread_safeness(void) {$/;"	f
+zmalloc_get_fragmentation_ratio	zmalloc.c	/^float zmalloc_get_fragmentation_ratio(void) {$/;"	f
+zmalloc_get_private_dirty	zmalloc.c	/^size_t zmalloc_get_private_dirty(void) {$/;"	f
+zmalloc_get_rss	zmalloc.c	/^size_t zmalloc_get_rss(void) {$/;"	f
+zmalloc_oom_handler	zmalloc.c	/^static void (*zmalloc_oom_handler)(size_t) = zmalloc_default_oom;$/;"	v	file:
+zmalloc_set_oom_handler	zmalloc.c	/^void zmalloc_set_oom_handler(void (*oom_handler)(size_t)) {$/;"	f
+zmalloc_size	zmalloc.c	/^size_t zmalloc_size(void *ptr) {$/;"	f
+zmalloc_thread_safe	zmalloc.c	/^static int zmalloc_thread_safe = 0;$/;"	v	file:
+zmalloc_used_memory	zmalloc.c	/^size_t zmalloc_used_memory(void) {$/;"	f
+zrealloc	zmalloc.c	/^void *zrealloc(void *ptr, size_t size) {$/;"	f
+zstrdup	zmalloc.c	/^char *zstrdup(const char *s) {$/;"	f
+HAVE_MALLOC_SIZE	zmalloc.h	42;"	d
+HAVE_MALLOC_SIZE	zmalloc.h	52;"	d
+HAVE_MALLOC_SIZE	zmalloc.h	60;"	d
+ZMALLOC_LIB	zmalloc.h	39;"	d
+ZMALLOC_LIB	zmalloc.h	49;"	d
+ZMALLOC_LIB	zmalloc.h	65;"	d
+__ZMALLOC_H	zmalloc.h	32;"	d
+__str	zmalloc.h	36;"	d
+__xstr	zmalloc.h	35;"	d
+zmalloc_size	zmalloc.h	43;"	d
+zmalloc_size	zmalloc.h	53;"	d
+zmalloc_size	zmalloc.h	61;"	d
